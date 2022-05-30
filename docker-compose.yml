@@ -1,0 +1,39 @@
+version: '3.4'
+
+volumes:
+    mssql_blazorserverlearning_volume:
+
+services:
+  blazorserverlearning:
+    hostname: blazorserverlearning
+    container_name: blazorserverlearning
+    image: ${DOCKER_REGISTRY-}blazorserverlearning
+    build:
+      context: .
+      dockerfile: BlazorServerLearning/Dockerfile
+    networks:
+        blazor_server_learning_network:
+            ipv4_address: 172.20.0.3
+  mssql_database:
+    hostname: mssql_database
+    container_name: mssql_database
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    volumes:
+        - mssql_blazorserverlearning_volume:/var/opt/mssql
+    ports:
+        - 1433:1433
+    environment:
+        - ACCEPT_EULA=Y
+        - SA_PASSWORD="Passw0rd"
+    networks:
+        blazor_server_learning_network:
+            ipv4_address: 172.20.0.2
+
+networks:
+    blazor_server_learning_network:
+        name: blazor_server_learning_network
+        driver: bridge
+        ipam:
+            config:
+                - subnet: "172.20.0.0/16"
+                  gateway: 172.20.0.1            
