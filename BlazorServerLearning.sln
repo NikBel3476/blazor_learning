@@ -5,12 +5,12 @@ VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServerLearning", "BlazorServerLearning\BlazorServerLearning.csproj", "{F883D2BC-57B1-4567-9CE6-2FB838609A4D}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{9B8270F9-E4EB-4416-A69E-DB014198E662}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{16FC0815-C065-462B-9496-8A65449D43BD}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{142B4CDE-C605-4696-94FC-3CEA0E5CD0A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,10 +22,10 @@ Global
 		{F883D2BC-57B1-4567-9CE6-2FB838609A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F883D2BC-57B1-4567-9CE6-2FB838609A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F883D2BC-57B1-4567-9CE6-2FB838609A4D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9B8270F9-E4EB-4416-A69E-DB014198E662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9B8270F9-E4EB-4416-A69E-DB014198E662}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9B8270F9-E4EB-4416-A69E-DB014198E662}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9B8270F9-E4EB-4416-A69E-DB014198E662}.Release|Any CPU.Build.0 = Release|Any CPU
+		{142B4CDE-C605-4696-94FC-3CEA0E5CD0A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{142B4CDE-C605-4696-94FC-3CEA0E5CD0A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{142B4CDE-C605-4696-94FC-3CEA0E5CD0A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{142B4CDE-C605-4696-94FC-3CEA0E5CD0A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

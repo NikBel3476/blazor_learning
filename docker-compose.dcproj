@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>9b8270f9-e4eb-4416-a69e-db014198e662</ProjectGuid>
+    <ProjectGuid>142b4cde-c605-4696-94fc-3cea0e5cd0a6</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
     <DockerServiceName>blazorserverlearning</DockerServiceName>
