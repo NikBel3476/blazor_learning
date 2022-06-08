@@ -1,0 +1,20 @@
+@page "/stringconcat"
+
+<PageTitle>StringConcat</PageTitle>
+
+<h3>StringConcat</h3>
+<p>String: @str</p>
+<button @onclick="concatString">Concat</button>
+@ChildContent
+
+@code {
+	[Parameter]
+	public RenderFragment ChildContent { get; set; }
+
+	private string str = "";
+
+	private void concatString()
+	{
+		str += "a";
+	}
+}

@@ -20,3 +20,11 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "BlazorServerLearning.dll"]
+
+FROM mcr.microsoft.com/dotnet/sdk:6.0 as development
+WORKDIR /app
+COPY ["BlazorServerLearning/BlazorServerLearning.csproj", "BlazorServerLearning/"]
+RUN dotnet restore "BlazorServerLearning/BlazorServerLearning.csproj"
+COPY . .
+WORKDIR "/app/BlazorServerLearning"
+RUN dotnet watch
