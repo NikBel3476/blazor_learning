@@ -1,0 +1,26 @@
+@page "/dosomething"
+@using BlazorServerLearning.Domain.Repository
+@using BlazorServerLearning.Domain.Models
+@inject BoredRepository boredRepository
+
+<PageTitle>Do Something</PageTitle>
+
+<h3>Do Something</h3>
+@if(@task != null)
+{
+   <p>Activity: @task.Activity</p>
+  <p>Accessibility: @task.Accessibility</p>
+  <p>Type: @task.Type</p>
+  <p>Participants: @task.Participants</p>
+  <p>Link: @task.Link</p>
+}
+
+<button @onclick="getTask">Get Task</button>
+
+@code {
+    private BoredAPIResponceModel task;
+    private async Task getTask()
+    {
+      task = await boredRepository.Get();
+    }
+}
